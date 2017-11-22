@@ -1,7 +1,5 @@
-package com.company;
-
 public class Piece {
-    Square location;
+    private Square location;
 
     public Piece(Square location){
         this.location = location;
