@@ -4,6 +4,7 @@ import java.util.*;
 public class Board {
     Square[] squares = new Square[40];
     Player[] players;
+    String logs = "";
 
     public Board(){
         createSquares();

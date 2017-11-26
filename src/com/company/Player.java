@@ -32,11 +32,14 @@ public class Player {
         this.face2 = die.playDice();
 
         System.out.println("Die1 : " + this.face1 + " Die2 : " + this.face2);
+        board.logs += "Die1 : " + this.face1 + " Die2 : " + this.face2;
         System.out.println("Initial location: " + this.location);
+        board.logs += "Initial location: " + this.location;
     }
 
     public boolean isDieDouble(){
         System.out.println("Checking is it double or not.. \n\n");
+        board.logs += "Checking is it double or not.. \n\n";
         return this.face1 == this.face2;
     }
 
@@ -54,6 +57,7 @@ public class Player {
         moveCount += this.face2;
 
         System.out.println("Go up to " + moveCount + " square.");
+        board.logs += "Go up to " + moveCount + " square.";
 
         this.location += moveCount;
 
@@ -62,6 +66,7 @@ public class Player {
         }
 
         System.out.println("Final location -> " + this.location +"\n");
+        board.logs += "Final location -> " + this.location +"\n";
 
         Square newLocation = board.getSquare(piece.getLocation(), moveCount);
         piece.setLocation(newLocation);

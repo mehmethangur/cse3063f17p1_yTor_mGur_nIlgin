@@ -6,5 +6,6 @@ public class FreeParkingSquare extends Square{
     @Override
     public void doAction(Player player, Board board){
         System.out.println("I'm in free parking square\n");
+        board.logs += "I'm in free parking square\n";
     }
 }

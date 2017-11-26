@@ -33,20 +33,23 @@ public class LotsSquare extends Square{
 
     @Override
     public void doAction(Player player, Board board){
-        int totalFace = 0;
+        int face = 0;
         if(owner < 0){
             Die die = new Die();
-            totalFace += die.playDice();
-            totalFace += die.playDice();
+            face = die.playDice();
             if(totalFace > 4 && player.amount.getAmount() >= price){
                 System.out.println(player.name + " bought " + this.getName() + "\n");
+                board.logs += player.name + " bought " + this.getName() + "\n";
                 owner = player.getId();
                 player.amount.setAmount(player.amount.getAmount() - this.price );
-            }else
+            }else{
                 System.out.println(player.name + " rolls die smaller than 4 or doesn't have enough money " + this.getName() + "\n");
+                 board.logs+= player.name + " rolls die smaller than 4 or doesn't have enough money " + this.getName() + "\n";
+            }
         }else{
             if(owner != player.getId()){
                 System.out.println("I'm in " + this.getName() + "\n");
+                board.logs += "I'm in " + this.getName() + "\n";
                 player.amount.setAmount(player.amount.getAmount() - this.rent);
                 board.getPlayer(owner).amount.setAmount(player.amount.getAmount() + this.rent);
             }

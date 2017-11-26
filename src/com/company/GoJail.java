@@ -6,6 +6,7 @@ public class GoJail extends Square{
     @Override
     public void doAction(Player player, Board board){
         System.out.println("\n\nI'm going to jail\n\n");
+        board.logs += "\n\nI'm going to jail\n\n";
         player.location = 11;
         player.punnish = 3;
     }

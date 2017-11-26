@@ -6,6 +6,7 @@ public class Jail extends Square{
     @Override
     public void doAction(Player player, Board board){
         System.out.println("I'm in jail \n");
+        board.logs += "I'm in jail \n";
         player.amount.setAmount(player.amount.getAmount() - 50);
         player.punnish = 0;
     }

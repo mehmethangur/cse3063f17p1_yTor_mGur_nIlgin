@@ -43,10 +43,13 @@ public class UtilitySquare extends Square{
             int face = die.playDice();
             if(face > 4 && player.amount.getAmount() >= price){
                 System.out.println(player.name + "bought" + this.getName() + "\n");
+                board.logs += player.name + "bought" + this.getName() + "\n";
                 owner = player.getId();
                 player.amount.setAmount(player.amount.getAmount() - this.price );
-            }else
-                System.out.println(player.name + "rolls die smaller than 4 or doesn't have enough money" + "\n");
+            }else{
+                System.out.println(player.name + " rolls die smaller than 4 or doesn't have enough money" + "\n");
+                board.logs += player.name + "rolls die smaller than 4 or doesn't have enough money" + "\n";
+            }
         }else{
             if(owner != player.getId()){
                 int rent = (player.face1 + player.face2) * 10;
