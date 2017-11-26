@@ -5,6 +5,6 @@ public class OrdinarySquare extends Square{
 
     @Override
     public void doAction(Player player, Board board){
-
+        System.out.println("I'm in Ordinary square");
     }
 }
