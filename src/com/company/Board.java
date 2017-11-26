@@ -27,7 +27,7 @@ public class Board {
         int index;
         int utilityCount=0;
 
-        String filename = "/Users/yasintoy/MonopolyGame/src/com/company/Monopoly-Lots.csv";
+        String filename = "..\\MonopolyGame\\src\\Monopoly-Lots.csv";
         result = this.readSquaresFromFile(filename);
 
 
