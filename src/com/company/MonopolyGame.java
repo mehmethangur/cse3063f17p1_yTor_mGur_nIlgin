@@ -93,6 +93,8 @@ public class MonopolyGame {
             }
         }
 
+        writeLogs(board);
+
     }
 
     private static void writeLogs(Board board){
