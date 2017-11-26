@@ -14,7 +14,7 @@ public class Player {
     boolean isOut;
     private Board  board;
 
-    public Player(String name, Board board, int id){
+    public Player(String name, Board board, int id, int initialMoney){
         this.id = id;
         this.punnish = 0;
         this.isOut = false;
@@ -22,7 +22,7 @@ public class Player {
         GoSquare square = new GoSquare(0);
         piece = new Piece(square);
         this.board = board;
-        this.amount = new Money(200);
+        this.amount = new Money(initialMoney);
     }
 
     public void TakeTurn(){

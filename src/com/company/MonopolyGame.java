@@ -14,11 +14,14 @@ public class MonopolyGame {
 
         int playerCount = keyboard.nextInt();
 
+        System.out.print("initial Money : ");
+        int initialMoney = keyboard.nextInt();
+
         board.players = new Player[playerCount];
 
         for (int i = 0; i < playerCount; i++) {
             System.out. print("\t\tEnter " + (i + 1) + ". player's name : ");
-            Player player = new Player(keyboard.next(), board, i);
+            Player player = new Player(keyboard.next(), board, i, initialMoney);
             board.players[i] = player;
         }
 
