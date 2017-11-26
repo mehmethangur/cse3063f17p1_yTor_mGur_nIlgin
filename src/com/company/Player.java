@@ -4,6 +4,7 @@ public class Player {
 
     String name;
     int face1;
+    int id;
     int face2;
     int punnish;
     Money amount;
@@ -13,7 +14,8 @@ public class Player {
     boolean isOut;
     private Board  board;
 
-    public Player(String name, Board board){
+    public Player(String name, Board board, int id){
+        this.id = id;
         this.punnish = 0;
         this.isOut = false;
         this.name = name;
@@ -63,6 +65,11 @@ public class Player {
 
         Square newLocation = board.getSquare(piece.getLocation(), moveCount);
         piece.setLocation(newLocation);
+
+    }
+
+    public int getId(){
+        return this.id;
     }
 
     public int whichRounds(){
