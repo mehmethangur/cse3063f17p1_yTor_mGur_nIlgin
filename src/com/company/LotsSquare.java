@@ -37,7 +37,7 @@ public class LotsSquare extends Square{
         if(owner < 0){
             Die die = new Die();
             face = die.playDice();
-            if(totalFace > 4 && player.amount.getAmount() >= price){
+            if(face > 4 && player.amount.getAmount() >= price){
                 System.out.println(player.name + " bought " + this.getName() + "\n");
                 board.logs += player.name + " bought " + this.getName() + "\n";
                 owner = player.getId();
