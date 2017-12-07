@@ -93,7 +93,7 @@ public class MonopolyGame {
             }
         }
 
-        writeLogs(board.logs);
+        writeLogs(board);
 
     }
 
